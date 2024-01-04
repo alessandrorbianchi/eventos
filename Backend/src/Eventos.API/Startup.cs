@@ -1,5 +1,6 @@
 using Eventos.API.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using Microsoft.OpenApi.Models;
 
 namespace Eventos.API
@@ -20,6 +21,7 @@ namespace Eventos.API
                 context => context.UseSqlite(Configuration.GetConnectionString("Default"))
             );
             services.AddControllers();
+            services.AddCors();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Eventos.API", Version = "v1" });
@@ -41,6 +43,11 @@ namespace Eventos.API
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors(x => x.AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowAnyOrigin()
+            );
 
             app.UseEndpoints(endpoints =>
             {
