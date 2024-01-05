@@ -489,3 +489,9 @@ yarn-error.log
 testem.log
 /typings
 Frontend/Eventos-App/dist
+Frontend/Eventos-App/.angular
+
+#Excluindo DB
+*.db
+*.db-shm
+*.db-wal
