@@ -1,6 +1,9 @@
-using Eventos.API.Data;
+using Eventos.Application;
+using Eventos.Application.Contratos;
+using Eventos.Persistence;
+using Eventos.Persistence.Contextos;
+using Eventos.Persistence.Contratos;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using Microsoft.OpenApi.Models;
 
 namespace Eventos.API
@@ -17,10 +20,19 @@ namespace Eventos.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DataContext>(
+            services.AddDbContext<EventosContext>(
                 context => context.UseSqlite(Configuration.GetConnectionString("Default"))
             );
-            services.AddControllers();
+            services.AddControllers()
+                    .AddNewtonsoftJson(x => x.SerializerSettings.ReferenceLoopHandling = 
+                        Newtonsoft.Json.ReferenceLoopHandling.Ignore
+                    );
+
+            services.AddScoped<IEventoPersist, EventoPersist>();
+            services.AddScoped<IEventoService, EventoService>();
+            services.AddScoped<IGeralPersist, GeralPersist>();
+            services.AddScoped<IPalestrantePersist, PalestrantePersist>();
+            
             services.AddCors();
             services.AddSwaggerGen(c =>
             {
