@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "LzzXKQ5x0IeWAVz/0Eztxn89f/yTAeeoR8hC1Qg4U4erPB6v0cu9Zr63YEK4/BnQk9K9TKbCSXRREUCBpNHv3A==",
+  "dgSpecHash": "CSf8eGZNNgwxLTk/ZjVKgjk3lxM25XldGDMLJe6r+9JuVWaQEaRx2UoBq4xJgI08Ga+v2uG4FtY+37NHnMMkIQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alessandro\\dev\\eventos\\Backend\\src\\Eventos.API\\Eventos.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\aless\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\aless\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\aless\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\aless\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.25\\microsoft.aspnetcore.jsonpatch.6.0.25.nupkg.sha512",
     "C:\\Users\\aless\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.25\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.25.nupkg.sha512",
@@ -43,6 +45,7 @@
     "C:\\Users\\aless\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\aless\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
     "C:\\Users\\aless\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\aless\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\aless\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\aless\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\aless\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
