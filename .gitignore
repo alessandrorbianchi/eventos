@@ -495,3 +495,4 @@ Frontend/Eventos-App/.angular
 *.db
 *.db-shm
 *.db-wal
+.vscode

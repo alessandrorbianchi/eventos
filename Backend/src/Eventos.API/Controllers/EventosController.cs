@@ -1,6 +1,5 @@
 using Eventos.Application.Contratos;
 using Eventos.Application.Dtos;
-using Eventos.Domain;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Eventos.API.Controllers;
@@ -108,9 +107,9 @@ public class EventosController : ControllerBase
             var evento = await _eventoService.GetEventoByIdAsync(id, true);
             if (evento == null) return NoContent();
 
-            return await _eventoService.DeleteEvento(id) ? 
-                Ok("Deletado") :
-                throw new Exception("Ocorreu um problem não específico ao tentar deletar Evento.");
+            return await _eventoService.DeleteEvento(id)
+                ? Ok(new { message = "Deletado"}) 
+                : throw new Exception("Ocorreu um problem não específico ao tentar deletar Evento.");
         }
         catch (Exception ex)
         {
