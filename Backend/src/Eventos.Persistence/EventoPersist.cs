@@ -39,8 +39,7 @@ namespace Eventos.Persistence
                 .Include(e => e.RedesSociais);
 
             if(incluirPalestrantes) {
-                query = query
-                    .Include(e => e.PalestrantesEventos)
+                query = query.Include(e => e.PalestrantesEventos)
                     .ThenInclude(pe => pe.Palestrante);
             }
 
