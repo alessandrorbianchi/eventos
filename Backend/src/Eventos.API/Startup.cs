@@ -4,6 +4,7 @@ using Eventos.Persistence;
 using Eventos.Persistence.Contextos;
 using Eventos.Persistence.Contratos;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.OpenApi.Models;
 
 namespace Eventos.API
@@ -65,6 +66,12 @@ namespace Eventos.API
                 .AllowAnyMethod()
                 .AllowAnyOrigin()
             );
+
+            app.UseStaticFiles(new StaticFileOptions() {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(Directory.GetCurrentDirectory(),"Resources")),
+                    RequestPath = new PathString("/Resources")
+            });
 
             app.UseEndpoints(endpoints =>
             {
