@@ -1,3 +1,7 @@
+using Eventos.Domain.Identity;
+using System;
+using System.Collections.Generic;
+
 namespace Eventos.Domain
 {
     public class Evento
@@ -10,6 +14,8 @@ namespace Eventos.Domain
         public string ImagemURL { get; set; }
         public string  Telefone { get; set; }
         public string Email { get; set; }
+        public int UserID { get; set; }
+        public User User { get; set; }
         public IEnumerable<Lote>? Lotes { get; set; }
         public IEnumerable<RedeSocial>? RedesSociais { get; set; }
         public IEnumerable<PalestranteEvento>? PalestrantesEventos { get; set; }
